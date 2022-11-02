@@ -1,4 +1,5 @@
 import { Component } from "react";
+import image from './writing.png'
 
 export class ToDoList extends Component {
   state = {
@@ -40,6 +41,8 @@ export class ToDoList extends Component {
     return (
       <div className="container">
         <form onSubmit={this.onFormSubmit} >
+        <div className="image">
+        <img src={image} alt="Hand" width="300px"/></div>
         <input type="text" placeholder="What do you need to do today?"
         onChange={(e) => {this.onChangeEvent(e.target.value)}}
         value={this.state.userInput}/>
